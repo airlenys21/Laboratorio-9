@@ -7,4 +7,4 @@ driver.delete_all_cookies()
 driver.get("https://www.amazon.com/")
 
 time.sleep(100)
-driver.close()
+driver.quite()
