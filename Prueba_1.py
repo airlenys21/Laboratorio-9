@@ -9,7 +9,7 @@ driver.delete_all_cookies()
 driver.get("https://www.amazon.com/")
 
 barradebusqueda = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "field-keywords")))
-time.sleep(2)
+time.sleep(4)
 
 busqueda = ("HP Pavilon azul")
 barradebusqueda.send_keys(busqueda)
