@@ -23,5 +23,20 @@ articulo = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XP
 articulo.click()
 time.sleep(2)
 
-time.sleep(100)
+desplegar = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "a-autoid-0-announce")))
+desplegar.click()
+time.sleep(2)
+
+cantidad = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "quantity_1")))
+cantidad.click()
+time.sleep(5)
+
+añadir_al_carrito = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "add-to-cart-button")))
+añadir_al_carrito.click()
+time.sleep(2)
+
+ir_al_carrito = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "nav-cart")))
+ir_al_carrito.click()
+
+time.sleep(10)
 driver.quit()
